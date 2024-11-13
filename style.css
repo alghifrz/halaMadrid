@@ -1,0 +1,636 @@
+@font-face {
+    font-family: 'Neue';
+    src: local('Neue'), local('Neue-Regular'); 
+}
+
+body {
+    font-family: 'Neue', sans-serif;
+    color: #555a8d;
+    width: 100%;
+    height: 100%;
+}
+
+.parent {
+    margin: 0px 20px 0px 20px;
+    padding: 0px 10px 0px 10px;
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "landing landing landing"
+        "sidel content sider"
+        "footer footer footer";
+    grid-template-columns: 1fr 10fr 1fr;
+    grid-template-rows: auto 100fr auto;
+    gap: 20px;
+}
+
+.parent .header {
+    grid-area: header;
+    /* background: aqua; */
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    border-bottom: #dee1eb 2px solid;
+    padding: 20px;
+    /* max-height: 120px;   */
+}
+
+.header .logo {
+    align-items: center;
+    gap: 20px;
+    display: flex;
+    justify-content: center;    
+}
+
+.header .logo a{
+    text-decoration: none;
+    color: #555a8d;
+    transition: transform 0.3s;
+}
+
+.header .logo  a:hover {
+    transform: scale(1.05);
+}
+
+.header .logo img {
+    border-right: #dee1eb 2px solid;
+    padding-right: 20px;
+    height: 70px;
+}
+
+
+.header .logo h1 {
+    font-size: 25px;
+    white-space: nowrap;
+    /* background-color: #555a8d; */
+}
+
+.header .navbar {
+    display: flex; 
+    justify-content: center; 
+    width: 100%;
+}
+
+.header .navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center; 
+    margin: 0; 
+    padding: 0; 
+}
+
+.header .navbar ul li {
+    padding: 10px 20px; 
+    font-weight: bold;
+}
+
+.header .navbar ul li a {
+    font-size: 20px;
+    text-decoration: none;
+    color: #555a8d; 
+}   
+
+.header .navbar ul li a:hover {
+    color:#3e31fa;
+}
+
+.header .sponsor {
+    gap: 20px;
+    display: flex;
+}
+
+.header .sponsor a{
+    transition: transform 0.3s;
+}
+
+.header .sponsor a:hover {
+    transform: scale(1.05);
+}
+
+.header .sponsor img {
+    height: 70px;
+}
+
+.parent .sidel {
+    grid-area: sidel;
+}
+
+.parent .sider {
+    grid-area: sider;
+}
+
+.parent .landing {
+    grid-area: landing;
+    height: 80vh;
+    background: linear-gradient(#555a8dcc, #000000cc), url('https://www.barcelo.com/guia-turismo/wp-content/uploads/2019/03/santiago-bernabeu-1.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.parent .landing h1 {
+    font-size: 100px;
+    font-weight: 800;
+    margin: 0px;
+}
+
+.parent .landing .sambutan {
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.parent .landing .button {
+    padding: 1rem 2rem;
+    background-color: rgba(255, 255, 255, 0.473); ;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 30px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.parent .landing .button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
+}
+
+.parent .content {
+    grid-area: content;
+}
+
+.parent .content .about {
+    background-color: #F3F5F8;
+    padding: 40px;
+    text-align: center;
+    border-radius: 20px;
+    color: #0F2145;
+}
+
+.parent .content .about h1 {
+    line-height: 0px;
+    font-size: 50px;
+    text-align: center;
+}
+
+.parent .content .about p {
+    font-size: 30px;
+    line-height: 40px;
+}
+
+.parent .content .vg{
+    background-color: #F3F5F8;
+    border-radius: 20px;
+    margin-top: 20px;
+    display: flex;
+    color: #0F2145;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+}
+
+.parent .content .vg .values {
+    padding: 40px;
+    align-items: center;
+}
+
+.parent .content .vg .values h1 {
+    font-size: 30px;
+    text-align: center;
+}
+
+.parent .content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.parent .content ul li {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+.parent .content .icon {
+    width: 50px;
+}
+
+.parent .content ul li table tr td{
+    text-align: center;
+}
+
+.parent .content ul li img {
+    height: 70px;
+}
+
+.parent .content p {
+    font-size: 20px;
+}
+
+.parent .content .pict img {
+    height: 600px;
+    border-radius: 20px;
+    padding: 0px;
+    transition: transform 0.3s ease;
+}
+
+.parent .content .pict img:hover {
+    transform: scale(1.1);
+}
+
+.parent .content .services {
+    width: 100%;
+    margin-top: 20px ;
+    background: #F3F5F8; /* White background */
+    border-radius: 20px;
+}
+
+.parent .content .services h1 {
+    font-size: 30px;
+    color: #0F2145;
+    text-align: center;
+    padding-top: 20px;
+    margin-bottom: 0px ;
+}
+
+.parent .content .services table {
+    padding: 40px;
+    width: 100%;
+}
+
+.parent .content .services th, .parent .content .services td {
+    padding: 1.5rem;
+    text-align: left;
+    background: white; 
+    border: none; 
+    color: #0F2145;
+}
+
+.parent .content .services th {
+    background: #0F2145; 
+    color: white;
+}
+
+.parent .content .services tr:first-child th:first-child {
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.parent .content .services tr:first-child th:last-child {
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.parent .content .contact-form {
+    width: 100%;
+    margin-top: 20px;
+    background-color: #F3F5F8;
+    border-radius: 20px;
+}
+
+.parent .content .contact-form h2 {
+    font-size: 30px;
+    text-align: center;
+    color: #0F2145;
+    padding-top: 20px;
+}
+
+.parent .content .contact-form .form-group {
+    margin-bottom: 1.5rem;
+    margin: 40px;
+}
+
+.parent .content .contact-form label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: #555a8d;
+}
+
+.parent .content .contact-form input,
+.parent .content .contact-form textarea {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    color: #333;
+    box-sizing: border-box;
+}
+
+.parent .content .contact-form textarea {
+    height: 150px;
+}
+
+/* Tambahkan wrapper div untuk tombol */
+.parent .content .contact-form .button-wrapper {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 40px; /* Tambahkan padding bottom untuk jarak */
+}
+
+.parent .content .contact-form .submit-btn {      
+    padding: 20px 40px; /* Tambahkan padding horizontal */
+    background-color: #0F2145;
+    color: white;
+    border-radius: 20px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: none; /* Tambahkan ini untuk menghilangkan border default */
+}
+
+.parent .content .contact-form .submit-btn:hover {
+    background-color: #3e31fa;
+}
+
+#gallery {
+    background-color: var(--light-bg);
+}
+
+#gallery h1 {
+    font-size: 30px;
+    color: #0F2145;
+    text-align: center;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+}
+
+.gallery-item {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    aspect-ratio: 1;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.gallery-item .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #0f21458f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.gallery-item:hover .overlay {
+    opacity: 1;
+}
+
+.parent .footer {
+    grid-area: footer;
+}
+
+footer {
+    border-top: #dee1eb 2px solid;
+    background-color: white;
+    color: #0F2145;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+}
+
+.footer .sponsor a:hover {
+    transform: scale(1.05);
+}
+
+.footer .sponsor img {
+    height: 70px;
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: auto;
+}
+
+.footer-content h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.footer-content p {
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.footer-bottom {
+    background-color: #222;
+    color: white;
+    padding: 10px;
+    font-size: 0.9em;
+}
+
+
+@media (max-width: 1300px) {
+    .landing h1 {
+        font-size: 4rem !important; 
+        margin-bottom: 1px !important;
+        /* display: none; */
+    }
+    .landing .sambutan {
+        font-size: 25px !important;
+        /* display: none; */
+    }
+    .vg {
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
+        margin: 20px 0px 20px 0px !important;
+    }
+    .vg .pict img {
+        height: 278px !important;
+    }
+}
+
+@media (max-width: 1800px) {
+    .vg .pict img {
+        height: 600px !important;
+    }
+}
+
+
+@media (max-width: 800px) {
+    .header .logo h1 {
+        font-size: 20px;
+    }
+    .header .sponsor img {
+        height: 50px;
+    }
+    .header, .navbar ul li a {
+        font-size: 18px;
+    }
+    .about p {
+        font-size: 15px !important;
+        line-height: 20px !important;
+    }
+    .vg {
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
+        margin: 20px 0px 20px 0px !important;
+    }
+    .vg .pict img {
+        height: 278px !important;
+    }
+    .parent .content .services {
+        padding: 1rem; 
+        margin: 2rem auto; 
+    }
+
+    .parent .content .services table {
+        border-spacing: 0.5rem;
+    }
+
+    .parent .content .services th, .parent .content .services td {
+        padding: 1rem; /* Adjust padding for smaller screens */
+    }
+    
+}
+
+@media (max-width: 700px) {
+    .parent {
+        margin: 0px 20px 0px 20px;
+        padding: 0px 10px 0px 10px;
+        display: grid;
+        grid-template-areas:
+            "header header header"
+            "landing landing landing"
+            "content content content"
+            "footer footer footer";
+        grid-template-columns: 1fr 10fr 1fr;
+        grid-template-rows: auto 100fr auto;
+        gap: 20px;
+    }
+    .header .logo h1,
+    .header .sponsor {
+        display: none !important; 
+    }
+    .header .logo img {
+        height: 70px;
+    }
+    .navbar ul li a {
+        font-size: 16px;
+    }
+    .landing h1 {
+        font-size: 4rem !important; 
+        margin-bottom: 20px !important;
+        /* display: none; */
+    }
+    .landing .sambutan {
+        font-size: 10px;
+        display: none;
+    }
+    .about p {
+        font-size: 15px !important;
+        line-height: 20px !important;
+    }
+    .vg {
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
+        margin: 20px 0px 20px 0px !important;
+    }
+    .vg .pict img {
+        height: 210px !important;
+    }
+    .parent .content .services {
+        padding: 0px; 
+        /* margin: 2rem auto;  */
+    }
+
+    .parent .content .services table {
+        border-spacing: 0.5rem; 
+    }
+
+    .parent .content .services th, .parent .content .services td {
+        padding: 10px; 
+    }
+    .parent .content .contact-form {
+        width: 90%;
+        padding: 1.5rem;
+    }
+
+    .parent .content .contact-form h2 {
+        font-size: 1.5rem;
+    }
+
+    .parent .content .contact-form input,
+    .parent .content .contact-form textarea {
+        padding: 0.8rem;
+        font-size: 1rem;
+    }
+
+    .parent .content .contact-form .submit-btn {
+        font-size: 1rem;
+    }
+    .footer-content h3 {
+        font-size: 1.3em;
+    }
+
+    .footer-content p {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 800px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .values ul {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 550px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+    .footer-content h3 {
+        font-size: 1.1em;
+    }
+
+    .footer-content p {
+        font-size: 0.8em;
+    }
+}
